@@ -46,11 +46,52 @@ public class Methods {
         return j;
     }
 
+    /*
+    Predefined Methods :
+    Methods which are already defined in java and ready to use.
+    Ex : Math.random();
+     */
+
+    public int randomNumber() {
+        return (int)(Math.random()*10);
+    }
+
+    /*
+    This Math.random will return double values, To convert it into Integer
+    we can typecast it by using
+
+    (int)(Math.random()
+
+     */
+
+    public void go() {
+        System.out.println("Inside Go Method");
+//    go(); this gives stackoverflow error.
+    }
+    public void go2() {
+        System.out.println("Inside Go2 Method");
+
+    } public void go3() {
+        System.out.println("Inside Go3 Method");
+        go(); //We can call no static methods in non static method.
+
+    }
     public static void main(String[] args) {
-        Methods methods = new Methods();
-        int sum = methods.addNumbers(5,3);
-        System.out.println(sum);
-        methods.displayMyName();
+//        Methods methods = new Methods();
+//        int sum = methods.addNumbers(5,3);
+//        System.out.println(sum);
+//        methods.displayMyName();
+
+        Methods calc = new Methods();
+        int result = calc.addNumbers(5,5);
+        System.out.println("Result: " + result);
+
+        System.out.println(calc.randomNumber());
+
+        calc.go3();
+
+        //we cant call non static method in static method block. ex : go();
+
     }
 
 }

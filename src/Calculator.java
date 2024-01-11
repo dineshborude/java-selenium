@@ -5,18 +5,18 @@ public class Calculator {
         System.out.println("Constructor Called");
     }
 
-    public void add() {
-        System.out.println("Adding some numbers");
+    public int add(int a, int b) {
+        return a+b;
     }
-    public void sub() {
-        System.out.println("Substracting some numbers");
-    }
-    public void div() {
-        System.out.println("Dividing some numbers");
-    }
-    public void mult() {
-        System.out.println("Multiplying some numbers");
-    }
+//    public void sub(int a, int b) {
+//        System.out.println("Substracting some numbers"+ a-b);
+//    }
+//    public void div(int a, int b) {
+//        System.out.println("Dividing some numbers"+ a/b);
+//    }
+//    public void mult(int a, int b) {
+//        System.out.println("Multiplying some numbers"+ a*b);
+//    }
 
     public static void main(String[] args) {
 //
